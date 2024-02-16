@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e4f11ef0-90b6-4ada-8677-b92e7bbdc550" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/img/tanks/bullets/bullet-down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/tanks/bullets/bullet-left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/tanks/bullets/bullet-right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/tanks/bullets/bullet-top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consts/files-def.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/file-utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tanks/panther/tank-bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tanks/panther/tank-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tanks/panther/tank-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tanks/panther/tank-top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bullet.py" beforeDir="false" afterPath="$PROJECT_DIR$/bullet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameItem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameScreen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank.py" beforeDir="false" afterPath="$PROJECT_DIR$/tank.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2o1Lrb36HDaTKONdeXqmO1P0cU0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/fenom/IT/repos/python/pyfun/tank-game",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23726.96" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e4f11ef0-90b6-4ada-8677-b92e7bbdc550" name="Changes" comment="" />
+      <created>1730032334309</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730032334309</updated>
+      <workItem from="1730032335551" duration="17000" />
+      <workItem from="1730555315177" duration="7000" />
+      <workItem from="1730826831439" duration="600000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
