@@ -2,7 +2,7 @@ import pygame
 
 from game_map import GameMap
 from tank import Tank, TankVariant
-from menu import Menu
+from menu import Menu, EVENTS
 
 SCREEN_DISPLAY_WIDTH = 576
 SCREEN_DISPLAY_HEIGHT = 576
@@ -13,7 +13,7 @@ class TankGame:
     _level_map = None
     _menu = None
     _player = None
-    _is_running = True
+    _is_game_started = False
 
     def __init__(self):
         pygame.init()
@@ -21,8 +21,8 @@ class TankGame:
             (SCREEN_DISPLAY_WIDTH, SCREEN_DISPLAY_HEIGHT)
         )
         self._time = pygame.time
-        # self._create_menu()
-        self._start_game()
+        self._menu = self._create_menu()
+        self._init_menu_loop()
 
     def _create_world(self):
         element_width = self._screen.get_size()[0] / 24
@@ -44,17 +44,17 @@ class TankGame:
         self._screen.blit(self._player.get_image(), self._player.position)
 
     def _create_menu(self):
-        self._menu = Menu(SCREEN_DISPLAY_WIDTH, SCREEN_DISPLAY_HEIGHT)
-        self._menu.add_button("PLAY", self._start_game)
-        self._menu.add_button("QUIT", self._quit_game)
+        menu = Menu(SCREEN_DISPLAY_WIDTH, SCREEN_DISPLAY_HEIGHT)
+        menu.add_button("PLAY", self._start_game)
+        menu.add_button("QUIT", EVENTS.EXIT)
+        return menu
 
     def _start_game(self):
         self._create_world()
         self._create_player()
+        self._menu.close()
+        self._is_game_started = True
         self._init_game_loop()
-
-    def _quit_game(self):
-        self._is_running = False
 
     def _game_renderer(self):
         self._player.on_move(self._screen, self._level_map)
@@ -64,17 +64,19 @@ class TankGame:
         pygame.display.update()
         pygame.display.flip()
 
-    def _init_game_loop(self):
-
-        while self._is_running:
+    def _init_menu_loop(self):
+        while self._menu.is_enabled:
             self._time.delay(TIME_DELAY)
-            events = pygame.event.get()
+            self._menu.renderer(pygame.event.get(), self._screen)
+            self._screen_renderer()
 
-            for event in events:
+    def _init_game_loop(self):
+        while self._is_game_started:
+            self._time.delay(TIME_DELAY)
+
+            for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    self._quit_game()
+                    self._is_game_started = False
 
-            # PoC of main menu
-            # self._menu.renderer(events, self._screen)
             self._game_renderer()
             self._screen_renderer()
