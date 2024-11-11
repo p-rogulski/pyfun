@@ -5,22 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4f11ef0-90b6-4ada-8677-b92e7bbdc550" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/img/tanks/bullets/bullet-down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/tanks/bullets/bullet-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/tanks/bullets/bullet-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/tanks/bullets/bullet-top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consts/files-def.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/file-utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/tanks/panther/tank-bottom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/tanks/panther/tank-left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/tanks/panther/tank-right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/tanks/panther/tank-top.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bullet.py" beforeDir="false" afterPath="$PROJECT_DIR$/bullet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameItem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameScreen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tank.py" beforeDir="false" afterPath="$PROJECT_DIR$/tank.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/main-menu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/tanks/blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/tanks/red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/music/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/music/main-menu.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basic_bot_strategy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot_strategy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot_strategy_type.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game_bot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heuristic_bot_strategy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tanks/bullets/bullet-down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tanks/bullets/bullet-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tanks/bullets/bullet-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tanks/bullets/bullet-top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tanks/hotchkiss/tank-bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tanks/hotchkiss/tank-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tanks/hotchkiss/tank-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tanks/hotchkiss/tank-top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tanks/panzer-4/tank-bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tanks/panzer-4/tank-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tanks/panzer-4/tank-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tanks/panzer-4/tank-top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_item_variant.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_item_variant.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_map.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/tank_game.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,19 +52,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/fenom/IT/repos/python/pyfun/tank-game",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/fenom/IT/repos/python/pyfun/tank-game&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -69,6 +83,7 @@
       <workItem from="1730032335551" duration="17000" />
       <workItem from="1730555315177" duration="7000" />
       <workItem from="1730826831439" duration="600000" />
+      <workItem from="1731331257311" duration="1228000" />
     </task>
     <servers />
   </component>

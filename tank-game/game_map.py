@@ -1,4 +1,4 @@
-from tank import Tank
+from player import Player
 from bullet import Bullet
 from game_item_type import GameItemType
 from game_item import GameItem
@@ -10,8 +10,8 @@ from constants import LEVEL_FILES
 
 
 class GameMap:
-    _player_tank: Tank
-    _enemy_tanks: list[Tank]
+    _player_tank: Player
+    _enemy_tanks: list[Player]
     _bullets: list[Bullet] = []
     _level_map: list[list[GameItem]] = []
 
@@ -45,7 +45,7 @@ class GameMap:
             case GameItemType.BRICK.value:
                 return Brick(self._element_size, position)
             case GameItemType.TANK.value:
-                return Tank(self._element_size, position)
+                return Player(self._element_size, position)
             case GameItemType.CUP.value:
                 return Cup(self._element_size, position)
             case GameItemType.PIPE.value:

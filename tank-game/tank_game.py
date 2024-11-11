@@ -1,7 +1,7 @@
 import pygame
 
 from game_map import GameMap
-from tank import Tank, TankVariant
+from player import Player, TankVariant
 from menu import Menu, EVENTS
 
 SCREEN_DISPLAY_WIDTH = 576
@@ -35,24 +35,31 @@ class TankGame:
                 if element is not None:
                     self._screen.blit(element.get_image(), element.position)
 
+    def _create_boots(self):
+        pass
+
     def _create_player(self):
         element_width = self._screen.get_size()[0] / 24
         element_height = self._screen.get_size()[1] / 24
         element_size = (element_width, element_height)
 
-        self._player = Tank(TankVariant.HOTCHKISS, element_size, (48, 48))
+        self._player = Player(element_size, (48, 48))
         self._screen.blit(self._player.get_image(), self._player.position)
 
     def _create_menu(self):
         menu = Menu(SCREEN_DISPLAY_WIDTH, SCREEN_DISPLAY_HEIGHT)
-        menu.add_button("PLAY", self._start_game)
-        menu.add_button("QUIT", EVENTS.EXIT)
+        menu.add_button("Play", self._start_game)
+        # TODO: Implementation
+        menu.add_button("Settings", EVENTS.EXIT)
+        menu.add_button("About", EVENTS.EXIT)
+        menu.add_button("Quit", EVENTS.EXIT)
         return menu
 
     def _start_game(self):
-        self._create_world()
-        self._create_player()
         self._menu.close()
+        self._create_world()
+        self._create_boots()
+        self._create_player()
         self._is_game_started = True
         self._init_game_loop()
 
@@ -65,7 +72,9 @@ class TankGame:
         pygame.display.flip()
 
     def _init_menu_loop(self):
+
         while self._menu.is_enabled:
+
             self._time.delay(TIME_DELAY)
             self._menu.renderer(pygame.event.get(), self._screen)
             self._screen_renderer()

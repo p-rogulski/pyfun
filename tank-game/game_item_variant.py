@@ -4,6 +4,6 @@ from enum import Enum
 class GameItemVariant(Enum):
     OBSTACLE = "OBSTACLE"
     TROPHY = "TROPHY"
-    PLAYER = "PLAYER"
+    TANK = "TANK"
     BULLET = "BULLET"
     TRACK = "TRACK"

@@ -21,5 +21,9 @@ A simple tank game inspired by retro classics like 'Pac-Man' or 'Tanks 1990 Fore
 - background worker - change levels and time
 - AI support
 
-![alt text](assets/menu.png)
-![alt text](assets/tanks.png)
+![Menu](assets/menu.png)
+![Gameplay](assets/tanks.png)
+
+#### Resources
+* [Image assets](tank-game/assets/img/README.md)
+* [Music assets](tank-game/assets/music/README.md)
