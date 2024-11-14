@@ -5,8 +5,8 @@ from game_item_variant import GameItemVariant
 
 
 class Green(GameItem):
-    def __init__(self, size, position):
-        super().__init__(size, position, GameItemVariant.TRACK)
+    def __init__(self, position):
+        super().__init__(position, GameItemVariant.TRACK)
 
     def get_image(self):
         return pygame.transform.smoothscale(

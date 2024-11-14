@@ -5,6 +5,7 @@ from tank import Tank, TankVariant
 from game_item_variant import GameItemVariant
 
 PLAYER_TANK_VARIANT = TankVariant.BLUE
+SINGLE_MOVE = 24
 
 tank_rotation_angle = dict(
     {
@@ -17,12 +18,8 @@ tank_rotation_angle = dict(
 
 
 class Player(Tank):
-    def __init__(self, size, position):
-        super().__init__(size, position, PLAYER_TANK_VARIANT)
-        self.variant = PLAYER_TANK_VARIANT
-        self._size = size
-        self._horizontal_size = size
-        self._vertical_size = (size[1], size[0])
+    def __init__(self, position):
+        super().__init__(position, PLAYER_TANK_VARIANT)
 
     def on_move(self, screen, level_map):
         keys = pygame.key.get_pressed()
@@ -42,19 +39,18 @@ class Player(Tank):
         y = int(self.position[1])
         match key:
             case pygame.K_UP:
-                y -= 24
+                y -= SINGLE_MOVE
             case pygame.K_DOWN:
-                y += 24
+                y += SINGLE_MOVE
             case pygame.K_LEFT:
-                x -= 24
+                x -= SINGLE_MOVE
             case pygame.K_RIGHT:
-                x += 24
+                x += SINGLE_MOVE
         return x, y
 
-    @staticmethod
-    def _collider(level_map, position):
-        row = math.ceil(position[0] / 24)
-        col = math.ceil(position[1] / 24)
+    def _collider(self, level_map, position):
+        row = math.ceil(position[0] / self.size[0])
+        col = math.ceil(position[1] / self.size[1])
 
         if level_map[col][row].variant == GameItemVariant.OBSTACLE:
             return False

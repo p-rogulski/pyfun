@@ -5,8 +5,8 @@ from game_item_variant import GameItemVariant
 
 
 class Bullet(GameItem):
-    def __init__(self, size, position):
-        super().__init__(size, position, GameItemVariant.BULLET)
+    def __init__(self, position):
+        super().__init__(position, GameItemVariant.BULLET)
         self.x = position.x
         self.y = position.y
 

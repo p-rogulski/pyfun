@@ -1,5 +1,4 @@
 from player import Player
-from bullet import Bullet
 from game_item_type import GameItemType
 from game_item import GameItem
 from brick import Brick
@@ -10,22 +9,25 @@ from constants import LEVEL_FILES
 
 
 class GameMap:
-    _player_tank: Player
-    _enemy_tanks: list[Player]
-    _bullets: list[Bullet] = []
     _level_map: list[list[GameItem]] = []
 
     def __init__(self, level, element_size):
         self._element_size = element_size
         self._level = level
-        self.load()
+        self._set_level_map()
 
     @property
     def level_map(self):
         return self._level_map
 
-    def load(self):
-        self._set_level_map()
+    def get_map_sectors_by_variant(self, variant):
+        elements = []
+        for row in self._level_map:
+            for element in row:
+                if element is not None and element.variant.value == variant.value:
+                    elements.append(element)
+
+        return elements
 
     def _set_level_map(self):
         level_file = open(LEVEL_FILES.get(self._level), "r", encoding="utf8")
@@ -43,15 +45,15 @@ class GameMap:
     def _get_item(self, code, position):
         match code:
             case GameItemType.BRICK.value:
-                return Brick(self._element_size, position)
+                return Brick(position)
             case GameItemType.TANK.value:
-                return Player(self._element_size, position)
+                return Player(position)
             case GameItemType.CUP.value:
-                return Cup(self._element_size, position)
+                return Cup(position)
             case GameItemType.PIPE.value:
-                return Pipe(self._element_size, position)
+                return Pipe(position)
             case GameItemType.GREEN.value:
-                return Green(self._element_size, position)
+                return Green(position)
             case _:
                 return None
 

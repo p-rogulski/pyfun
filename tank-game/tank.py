@@ -24,16 +24,13 @@ tank_rotation_angle = dict(
 
 
 class Tank(GameItem):
-    def __init__(self, size, position, variant):
-        super().__init__(size, position, GameItemVariant.TANK)
-        self.variant = variant
-        self._size = size
-        self._horizontal_size = size
-        self._vertical_size = (size[1], size[0])
+    def __init__(self, position, tank_variant):
+        super().__init__(position, GameItemVariant.TANK)
+        self.tank_variant = tank_variant
 
     def get_image(self):
         keys = pygame.key.get_pressed()
-        path = f"{TANK_IMG_PATH_PREFIX}/{self.variant.value}"
+        path = f"{TANK_IMG_PATH_PREFIX}/{self.tank_variant.value}"
         angle = 0
 
         for key in tank_rotation_angle:
@@ -41,4 +38,4 @@ class Tank(GameItem):
                 angle = tank_rotation_angle[key]
                 break
         img = pygame.transform.rotate(pygame.image.load(path), angle)
-        return pygame.transform.smoothscale(img, self._size)
+        return pygame.transform.smoothscale(img, self.size)

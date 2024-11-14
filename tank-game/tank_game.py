@@ -1,18 +1,23 @@
+import random
 import pygame
 
 from game_map import GameMap
-from player import Player, TankVariant
+from player import Player
+from game_item_variant import GameItemVariant
+from game_bot import GameBot
 from menu import Menu, EVENTS
 
 SCREEN_DISPLAY_WIDTH = 576
 SCREEN_DISPLAY_HEIGHT = 576
 TIME_DELAY = 90
+BOTS_COUNT = 7
 
 
 class TankGame:
-    _level_map = None
+    _map = None
     _menu = None
     _player = None
+    _boots = []
     _is_game_started = False
 
     def __init__(self):
@@ -28,22 +33,33 @@ class TankGame:
         element_width = self._screen.get_size()[0] / 24
         element_height = self._screen.get_size()[1] / 24
         element_size = (element_width, element_height)
-        self._level_map = GameMap(2, element_size).level_map
+        self._map = GameMap(2, element_size)
 
-        for row in self._level_map:
+        for row in self._map.level_map:
             for element in row:
                 if element is not None:
                     self._screen.blit(element.get_image(), element.position)
 
     def _create_boots(self):
-        pass
+        positions = list(
+            map(
+                lambda track: track.position,
+                self._map.get_map_sectors_by_variant(GameItemVariant.TRACK),
+            )
+        )
+
+        for _ in range(BOTS_COUNT):
+            position = random.choice(positions)
+            game_bot = GameBot(position)
+            self._screen.blit(game_bot.get_image(), game_bot.position)
+            positions.remove(position)
 
     def _create_player(self):
         element_width = self._screen.get_size()[0] / 24
         element_height = self._screen.get_size()[1] / 24
         element_size = (element_width, element_height)
 
-        self._player = Player(element_size, (48, 48))
+        self._player = Player(element_size)
         self._screen.blit(self._player.get_image(), self._player.position)
 
     def _create_menu(self):
@@ -64,7 +80,7 @@ class TankGame:
         self._init_game_loop()
 
     def _game_renderer(self):
-        self._player.on_move(self._screen, self._level_map)
+        self._player.on_move(self._screen, self._map.level_map)
 
     @staticmethod
     def _screen_renderer():
@@ -74,7 +90,6 @@ class TankGame:
     def _init_menu_loop(self):
 
         while self._menu.is_enabled:
-
             self._time.delay(TIME_DELAY)
             self._menu.renderer(pygame.event.get(), self._screen)
             self._screen_renderer()
