@@ -12,7 +12,7 @@ A simple tank game inspired by retro classics like 'Pac-Man' or 'Tanks 1990 Fore
 
 **Features**
 - level
-- tanks: panther, panzer-4
+- tanks: red team, blue team
 - Keyboard control tank
 
 **To do:**
